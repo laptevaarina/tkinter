@@ -1,10 +1,18 @@
 from tkinter import *
 root = Tk()
-fr1 = Frame(root)
-fr1.pack(side = 'top')
-btn_1 = Button(fr1, text = 'Button1', width = 10, height = 3, bg = 'blue', fg = 'black', font = 'arial 14')
-btn_2 = Button(fr1, text = 'Button2', width = 10, height = 3, bg = 'yellow', fg = 'black', font = 'arial 16')
 root.geometry('500x300')
+fr_up = Frame(root)
+btn_1 = Button(fr_up, text = 'ok_1', width = 5, height = 2, bg = 'blue', fg = 'black', font = 'arial 14')
+btn_2 = Button(fr_up, text = 'ok_2', width = 5, height = 2, bg = 'yellow', fg = 'black', font = 'arial 16')
+fr_up.pack(side = 'top', fill = 'both') 
 btn_1.pack(side = 'left')
-btn_2.pack(side = 'right', padx = 5)
+btn_2.pack(side = 'right')
+
+fr_down = Frame(root)
+btn_3 = Button(fr_down, text = 'ok_3', width = 5, height = 2, bg = 'red', fg = 'black', font = 'arial 14')
+btn_4 = Button(fr_down, text = 'ok_4', width = 5, height = 2, bg = 'green', fg = 'black', font = 'arial 16')
+fr_down.pack(side = 'bottom', fill = 'both') 
+btn_3.pack(side = 'left')
+btn_4.pack(side = 'right')
+
 root.mainloop()

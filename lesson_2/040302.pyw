@@ -1,6 +1,6 @@
 from tkinter import *
 root = Tk()
-root.geometry('500x300')
+root.geometry('500x400')
 
 btn11 = Button(root, text = '1', width = 5, height = 3)
 btn11.grid(row=0, column = 0, padx=10)
@@ -29,7 +29,16 @@ btn33.grid(row=2, column = 2, padx=10, pady = 10)
 btn34 = Button(root, text = '12', width = 5, height = 3)
 btn34.grid(row=2, column = 3, padx = 10, pady = 10)
 
+btn41 = Button(root, text = 'A', width = 5, height = 3)
+btn41.grid(row=3, column = 0, pady = 10, padx = 10)
+btn42 = Button(root, text = 'B', width = 5, height = 3)
+btn42.grid(row=3, column = 1, padx = 10, pady = 10)
+btn43 = Button(root, text = 'C', width = 5, height = 3)
+btn43.grid(row=3, column = 2, padx=10, pady = 10)
+btn44 = Button(root, text = 'D', width = 5, height = 3)
+btn44.grid(row=3, column = 3, padx = 10, pady = 10)
+
 ent = Entry(root, width = 40)
-ent.grid(row = 3, columnspan = 4, pady = 10)
+ent.grid(row = 4, columnspan = 4, pady = 10)
 
 root.mainloop()

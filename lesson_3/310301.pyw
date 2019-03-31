@@ -1,11 +1,11 @@
 from tkinter import *
 root = Tk()
 
-def hello(event):
+def hello():
     print('Hello, kids!')
 
-btn = Button(root, text='press me!', width=10, height=5)
+btn = Button(root, text='press me!', command=hello)
 btn.pack()
-btn.bind("<Button-1>", hello)
+
 
 root.mainloop()

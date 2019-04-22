@@ -5,12 +5,13 @@ canv = Canvas(root, width = 400, height = 400)
 canv.pack()
 
 from random import randint, choice
-colors = ['red', 'green', 'yellow', 'blue']
+colors = ['red', 'green', 'yellow', 'blue', '#BB99ff', '#FF00CC']
 
-R = randint(10, 40)
-x = randint(R, 400 - R)
-y = randint(R, 400 - R)
-color = choice(colors)
-canv.create_oval(x-R, y-R, x+R, y+R, fill = color)
+for i in range(10):
+    R = randint(10, 40)
+    x = randint(R, 400 - R)
+    y = randint(R, 400 - R)
+    color = choice(colors)
+    canv.create_oval(x-R, y-R, x+R, y+R, fill = color)
 
 root.mainloop()

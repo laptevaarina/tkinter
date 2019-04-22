@@ -7,27 +7,27 @@ canv = Canvas(root, width = 400, height = 400)
 canv.pack()
 
 from random import randint, choice
-colors = ['red', 'green', 'yellow', 'black', '#FF00CC', '#AA11aa']
+colors = ['blue','red', 'green', 'yellow', 'black', '#FF00CC', '#AA11aa']
 
 def random_draw(event):
-    count_r = 0
-    count_g = 0
+    count_mini = 0
+    count_max = 0
     for i in range(20):
-        R = randint(10, 40)
+        R = randint(5, 90)
         x = randint(R, 400 - R)
         y = randint(R, 400 - R)
         color = choice(colors)
         canv.create_oval(x-R, y-R, x+R, y+R, fill = color)
-        if color == 'red':
-            count_r += 1
-        if color == 'green':
-            count_g += 1
-    print(count_r, 'red circle(s)', count_g, 'green circle(s)')
+        if R < 20 and color == 'red':
+            count_mini += 1
+        if R > 50 and color == 'blue':
+            count_max += 1
+    print(count_mini, 'red circle(s),', count_max, 'blue circle(s)')
     
 def clear(event):
     canv.delete(ALL)
 
-btn1 = Button(fr, text = 'Random 20, count red and green')
+btn1 = Button(fr, text = 'Random 20, count little red and big blue')
 btn1.pack(side = LEFT)
 btn1.bind('<1>', random_draw)
 

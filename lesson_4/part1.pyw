@@ -7,7 +7,7 @@ canv.pack()
 from random import randint, choice
 colors = ['red', 'green', 'yellow', 'blue', '#BB99ff', '#FF00CC']
 
-for i in range(10):
+for i in range(12):
     R = randint(10, 40)
     x = randint(R, 400 - R)
     y = randint(R, 400 - R)

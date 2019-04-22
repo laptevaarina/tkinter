@@ -1,9 +1,16 @@
 from tkinter import *
 root = Tk()
 
-canv = Canvas(root, width = 200, height = 100)
+canv = Canvas(root, width = 400, height = 400)
 canv.pack()
 
-canv.create_oval(30, 30, 90,90, fill = 'yellow')
+from random import randint, choice
+colors = ['red', 'green', 'yellow', 'blue']
+
+R = randint(10, 40)
+x = randint(R, 400 - R)
+y = randint(R, 400 - R)
+color = choice(colors)
+canv.create_oval(x-R, y-R, x+R, y+R, fill = color)
 
 root.mainloop()
